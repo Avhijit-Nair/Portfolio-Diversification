@@ -104,24 +104,6 @@ def main(backend: ProgramBackend, user_messenger: UserMessenger, **kwargs):
     result = diversify_portfolio(backend, user_messenger, **kwargs)
     user_messenger.publish(result, final=True)  
 
-
-stocks = ["TICKER1", "TICKER2"]
-n = len(stocks)
-rho = np.ones((n,n))
-rho[0,1] = 0.8
-rho[1,0] = 0.8
-
-data = RandomDataProvider(tickers = stocks,
-                 start = datetime.datetime(2016,1,1),
-                 end = datetime.datetime(2016,1,30))
-data.run()
-rho = data.get_similarity_matrix()
-rho = -1 * rho
-q = 1
-ansatz = TwoLocal(qubitOp.num_qubits, 'ry', 'cz', reps=5, entanglement='full')
-np.random.seed(10)  # seed for reproducibility
-initial_point = np.random.random(ansatz.num_parameters)
-
 inputs = {'rho':rho,
          'num_assets':n,
          'num_clusters':q,

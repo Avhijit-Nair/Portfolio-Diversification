@@ -1,0 +1,6 @@
+cvxopt
+qiskit-aer
+fastapi
+rq
+uvicorn[standard]
+aioredis==2.0.0b1

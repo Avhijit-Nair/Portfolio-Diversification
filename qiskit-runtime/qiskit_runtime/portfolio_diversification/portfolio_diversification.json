@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-diversification",
+  "description": "A program that calculates the optimal numbwer of assets to maximize returns on investment and minimizes risk.",
+  "parameters":[{"name":"rho","description":"Similarity matrix of time series data of the assets","type":"numpy.ndarray","required":true},
+  	{"name":"num_assets","description":"Number of total available assets","type":"int","required":true},
+  	{"name":"num_clusters","description":"Number of clusters into which the assets should be divided","type":"int","required":true},
+  	{"name":"optimizer","description":"Optimizer type and number of iterations required for the ansatz","type":"dict","required":true},
+  	{"name":"ansatz","description":"The variational circuit used in the program","type":"","required":true},
+  	{"name":"initial_point","description":"The starting point for optimization process","type":"","required":true}],
+  "return_values":[{"name":"quantum_solution","description":"The output of VQE","type":"dict"},
+  	{"name":"ground_level","description":"The ground state of the Ising Hamiltonian","type":"double"}]
+}

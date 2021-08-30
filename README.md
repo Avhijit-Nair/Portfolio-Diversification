@@ -86,3 +86,5 @@ curl -X 'GET' \
 'http://127.0.0.1:8000/jobs/<job_id>/results' \
 -H 'accept: application/json'
 ```
+# Link to the draft of the project report
+https://docs.google.com/document/d/1qokS-pWZNjXfcI5fxtIrWZJbYLbP-H00cQDzabJwo2U/edit?usp=sharing
